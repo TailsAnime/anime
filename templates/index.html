@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Anime Twixtor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <nav>
+        <h2>Anime Twixtor</h2>
+        <a href="{{ url_for('login') }}">Login</a>
+        <a href="{{ url_for('register') }}">Sign Up</a>
+    </nav>
+    <div class="container">
+        <h2>Welcome to Anime Twixtor!</h2>
+        <p>Enjoy high-quality anime Twixtor clips.</p>
+    </div>
+</body>
+</html>
+@app.route('/')
+def index():
+    return render_template('index.html')
